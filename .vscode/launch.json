@@ -1,0 +1,47 @@
+{
+    "version": "0.2.0",
+
+    "configurations": [
+        {
+            // Nom qui apparaîtra dans le menu Debug de VS Code
+            "name": "Debug Neural Network",
+
+            // On utilise le debugger GDB
+            "type": "cppdbg",
+
+            // Lance le programme
+            "request": "launch",
+
+            // IMPORTANT :
+            // C'est l'exécutable que nous allons créer.
+            "program": "${workspaceFolder}/test_nn.exe",
+
+            // Le programme démarre dans le terminal
+            "cwd": "${workspaceFolder}",
+
+            // Aucun argument pour le moment
+            "args": [],
+
+            // Ne pas arrêter automatiquement au démarrage
+            "stopAtEntry": false,
+
+            // Utilise GDB
+            "MIMode": "gdb",
+
+            // Permet à VS Code de trouver gdb
+            "miDebuggerPath": "gdb.exe",
+
+            // Affiche la console dans le terminal
+            "externalConsole": false,
+
+            // Configuration pour afficher correctement les variables
+            "setupCommands": [
+                {
+                    "description": "Activer le formatage des variables",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+# Build files
+
+build/
+
+# Compiled binaries
+
+*.exe
+*.o
+*.obj
+
+# Generated model
+
+models/*.txt
+
+# Temporary files
+
+*.log
+# Generated model at project root
+/model.txt
