@@ -47,3 +47,14 @@ add_test(
     NAME NeuronTest
     COMMAND test_neuron
 )
+
+add_executable(
+    test_activation
+    tests/test_activation.cpp
+    src/ActivationFunctions.cpp
+)
+
+add_test(
+    NAME ActivationFunctionsTest
+    COMMAND test_activation
+)
