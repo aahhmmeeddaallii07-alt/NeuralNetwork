@@ -1,14 +1,14 @@
-# Neural Network from Scratch in C++
+# Neural Network from Scratch in C++ #
 
 A neural network implemented from scratch in C++ without using machine learning frameworks.
 
-## Overview
+# Overview #
 
 This project implements the fundamental components of a neural network from the ground up.
 
 The goal is to understand how neural networks work internally, including forward propagation, backpropagation, gradient descent, training, evaluation and model persistence.
 
-## Features
+## Features ##
 
 - Vector operations
 - Matrix operations
@@ -36,7 +36,7 @@ The goal is to understand how neural networks work internally, including forward
 - Model saving and loading
 - Command Line Interface
 
-## Project Architecture
+## Project Architecture ##
 
 ```text
 NeuralNetwork/
@@ -73,3 +73,56 @@ NeuralNetwork/
 ├── tests/
 ├── README.md
 └── NeuralNetwork.exe
+
+## Build with CMake
+
+Requirements:
+- CMake
+- A C++17-compatible compiler
+- MinGW Makefiles when using MinGW on Windows
+
+Configure the project from the repository root:
+
+```powershell
+cmake -S . -B build -G "MinGW Makefiles"
+```
+
+Build:
+
+```powershell
+cmake --build build
+```
+
+## Run the application ##
+
+Display available commands:
+
+```powershell
+.\build\NeuralNetwork.exe
+```
+
+Train the model:
+
+```powershell
+.\build\NeuralNetwork.exe train
+```
+
+Predict a sample:
+
+```powershell
+.\build\NeuralNetwork.exe predict 0.3 0.7
+```
+
+Evaluate the model:
+
+```powershell
+.\build\NeuralNetwork.exe metrics
+```
+
+## Run automated tests ##
+
+```powershell
+ctest --test-dir build --output-on-failure
+```
+
+The test suite covers loss functions, neuron calculations, and activation functions.
