@@ -36,3 +36,14 @@ add_test(
     NAME LossFunctionsTest
     COMMAND test_loss
 )
+
+add_executable(
+    test_neuron
+    tests/test_neuron.cpp
+    src/Neuron.cpp
+)
+
+add_test(
+    NAME NeuronTest
+    COMMAND test_neuron
+)
