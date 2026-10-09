@@ -23,3 +23,16 @@ add_executable(
     src/CSVLoader.cpp
     src/Matrix.cpp
 )
+
+enable_testing()
+
+add_executable(
+    test_loss
+    tests/test_loss.cpp
+    src/LossFunctions.cpp
+)
+
+add_test(
+    NAME LossFunctionsTest
+    COMMAND test_loss
+)
